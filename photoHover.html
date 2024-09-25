@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+     <style>
+        header{
+            background-color: rgb(28, 50, 216);
+            border: 5px solid black;
+            height: 60px;
+            font-style: italic;
+            font-weight: 100px;
+            
+        }
+        .container{
+            width: 100%;
+            height: 500px;
+           padding:5px;
+           margin: 10px auto;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           background-color: blanchedalmond;
+           border: 1px solid black;
+
+        }
+        .box{
+            width:250px;
+            height: 250px;
+            margin: 0% 2px;
+            box-shadow: 0 0 20px 2px rgb(64, 179, 208);
+            transition: 1s;
+            background-color: blueviolet;
+
+        }
+        img{
+            display: block;
+            width: 250px;
+            height: 250px;
+            border-radius :5px ;
+        }
+        .box:hover{
+            transform: scale(1.3);
+            z-index: 2;
+        }
+     </style>
+</head>
+<body>
+    <header > <b><center ><h2>Hover Effect</h2></center> </b></header>
+    <div class="container">
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAfHiaJaqzXDhv-mVG8J1M_UK-6PS8sdtZ4g&s">
+        </div>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBJl3zwVXtry6zf2gwWRcNjOJ2PGiXvHNX9A&s">
+        </div>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTynVlrkHZpI_Ex6ELu_pTIOxh7kv85sZwSnQ&s">
+        </div>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQauxcT16LKQsSvZG_0DnlRd-2khYq-z9gpww&s">
+        </div>
+        
+    </div>
+</body>
+</html>

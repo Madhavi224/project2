@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+    <header align="center"><h1>Gallery</h1></header>
+     <aside id="box">
+       
+    <div class="as"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1200px-Taj_Mahal_%28Edited%29.jpeg"></div>
+    
+    <div class="as"><img src="https://www.shutterstock.com/image-photo/hyderabad-india-november-9th-2020-600nw-1911230902.jpg"></div>
+   
+    <div class="as"><img src="https://assets.gqindia.com/photos/62f9c75e0d4e31701fb885d6/1:1/w_1080,h_1080,c_limit/Lesser-known-facts-about-India.jpeg"></div>
+    
+    <div class="as"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN9ZhAuXAH7Vb0z0pMln_c5thpABDx6qZStQ&s"></div>
+
+    <div class="as"><img src="https://blogbox.indianeagle.com/wp-content/uploads/2016/12/Facts-of-Vrindavan-Chandrodaya-Mandir-in-Mathura.jpg"></div>
+
+    <div class="as"><img src="https://images.news18.com/ibnlive/uploads/2020/08/1596607721_akshardham-temple-delhi.jpg"></div>
+  
+</aside>
+    <main id="mn"></main>
+</body>
+<script> 
+    // const box=document.getElementsByClassName("as");
+    // const img=document.getElementById("img");
+    // const main=document.getElementById("mn");
+    // console.log(mn);
+    // for(i=mn;i<=img;i++){
+    //      div.doucment.img("mn");
+    // }
+    const boxs=document.getElementsByClassName('box');
+const imege=document.getElementById('img');
+
+imege.addEventListener('dragstart',()=>{
+    console.log("drag start");
+})
+imege.addEventListener('dragend',()=>{
+    console.log("drag end");
+})
+
+for(boxs of box){
+    box.addEventListener('dragenter',()=>{
+        console.log("drag enter");
+    })
+    box.addEventListener('dragleave',()=>{
+        console.log("drag leave");
+    })
+    box.addEventListener('dragover',(e)=>{
+        console.log("drag over");
+        e.preventDefault()  
+    })
+    box.addEventListener('drop',(e)=>{
+        e.target.append(imege)
+    })
+}
+</script>
+</html>
